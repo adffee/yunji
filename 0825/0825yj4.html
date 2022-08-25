@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 css</title>
+
+    <style>
+       table{
+            font-size :30px;
+            color: dodgerblue;
+            text-align: center;
+        }
+
+        thead,
+        tfoot{
+            height: 60px;
+        }
+
+        tbody{
+            height: 50px;
+        }
+
+        col:nth-child(1) {
+            width: 50px;
+        }
+
+        col:nth-child(2) {
+            width: 100px;
+        }
+
+        col:nth-child(3) {
+            width: 120px;
+        } 
+
+        th{
+            background-color:lightcyan;
+        }
+
+        tfoot td{
+            font-size :25px;
+            background-color:aquamarine;
+            color:darkmagenta;
+            text-decoration:underline;
+        }
+        
+        th, td {
+            border: 1px solid green;
+        }
+
+       td:not(tfoot td){
+        font-size :22px;
+            background-color:antiquewhite;
+            color:crimson;
+       }
+       td:not(tfoot td):hover{
+            background-color:silver;
+            font-size: 30px;
+        }
+        
+        /* table>:not(tfoot) td:hover {
+            background-color:silver;
+            font-size: 30px;
+        } */
+        
+       
+        /* tr>th{
+            width: 50px;
+        }
+        tr>th+th{
+            width: 100px;
+        }
+        tr>th+td{
+            width: 120px;
+        } */
+
+       
+        
+    </style>
+</head>
+<body>
+    <figure>
+        <figcaption>과일 재고 관리</figcaption>
+
+        <table>
+             <colgroup>
+                <col />
+                <col />
+                <col span="2"/>
+            </colgroup> 
+            
+            <thead>
+                <tr>
+                    <th colspan="2">구분</th>
+                    <th scope="col">단가</th>
+                    <th scope="col">수량</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th rowspan="4">품목</th>
+                    <th scope="row">사과</th>
+                    <td rowspan="2">5000원</td>
+                    <td>30개</td>
+                </tr>
+                <tr>
+                    <th scope="row">배</th>
+                    <td>10개</td>
+                </tr>
+                <tr>
+                    <th scope="row">참외</th>
+                    <td>3500원</td>
+                    <td>60개</td>
+                </tr>
+                <tr>
+                    <th scope="row">수박</th>
+                    <td>9000원</td>
+                    <td>20개</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th scope="col" colspan="3">과일 재고수량</th>
+                    <td>120개</td>
+                </tr>
+            </tfoot>
+        </table>
+    </figure>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 css</title>
+
+    <style>
+       table{
+            font-size :30px;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid green;
+        }
+
+        thead,tfoot{
+            height: 60px;
+        }+
+        tfoot>tr>td{
+            font-size :25px;
+            background-color:lawngreen;
+            color:red;
+            text-decoration:underline
+        }
+        tr>th{
+            background-color:lightcyan;
+            color:dodgerblue;
+        }
+        tr>td{
+            font-size :22px;
+            background-color:peachpuff;
+            color:deeppink
+        }
+        /* table>:not(tfoot) td:hover {
+            background-color:silver;
+            font-size: 30px;
+        } */
+        table :not(tfoot) tr>td:hover{
+            background-color:silver;
+            font-size: 30px;
+        }
+        table :not(thead,tfoot){
+            height: 50px;
+        }
+        /* tr>th{
+            width: 50px;
+        }
+        tr>th+th{
+            width: 100px;
+        }
+        tr>th+td{
+            width: 120px;
+        } */
+
+        col:first-child {
+            width: 50px;
+        }
+
+        col:nth-child(2) {
+            width: 100px;
+        }
+
+        col:last-child {
+            width: 120px;
+        } 
+        
+    </style>
+</head>
+<body>
+    <figure>
+        <figcaption>과일 재고 관리</figcaption>
+
+        <table>
+             <colgroup>
+                <col />
+                <col />
+                <col span="2"/>
+            </colgroup> 
+            
+            <thead>
+                <tr>
+                    <th colspan="2">구분</th>
+                    <th scope="col">단가</th>
+                    <th scope="col">수량</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th rowspan="4">품목</th>
+                    <th scope="row">사과</th>
+                    <td rowspan="2">5000원</td>
+                    <td>30개</td>
+                </tr>
+                <tr>
+                    <th scope="row">배</th>
+                    <td>10개</td>
+                </tr>
+                <tr>
+                    <th scope="row">참외</th>
+                    <td>3500원</td>
+                    <td>60개</td>
+                </tr>
+                <tr>
+                    <th scope="row">수박</th>
+                    <td>9000원</td>
+                    <td>20개</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th scope="col" colspan="3">과일 재고수량</th>
+                    <td>120개</td>
+                </tr>
+            </tfoot>
+        </table>
+    </figure>
+</body>
+</html> -->
