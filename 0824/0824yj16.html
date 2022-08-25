@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,9 +95,9 @@
         <li>봉고</li>
     </ul>
 </body>
-</html>
+</html> -->
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -115,6 +117,10 @@
         h2{
             font-size: 30px;
         }
+        .egong ol li+li{
+            text-decoration: underline;
+            font-size: 30px;
+        }
         li{
             font-size: 20px;
         }
@@ -124,9 +130,11 @@
         }
         .eegong{
             background-color: darkolivegreen;
+        }
+        .eegong li{
             color:red;
         }
-        {
+        .eegong>li~li{
             color: yellow;
         }
 
@@ -146,7 +154,7 @@
                 <li>k7
                     <ol style="color:green;">
                         <li>가솔린</li>
-                        <li style="font-size: 30px; text-decoration: underline;">디젤</li>
+                        <li >디젤</li>
                     </ol>
                 </li>
             </ul>
@@ -157,28 +165,28 @@
     </ul>
     <hr>
 
-    <div>
-        <h2>2020년식</h2>
-        <ul class="eegong">
-            <li>세단</li>
-            <li>suv
-                <ul>
-                    <li>산타페</li>
-                    <li>쏘렌토
-                        <ol>
-                            <li>가솔린</li>
-                            <li>디젤</li>
-                        </ol>
-                    </li>
-                    <li>셀토스</li>
-                </ul>
-            </li>
-            <li>트럭</li>
-            <li>봉고</li>
-        </ul>
-    </div>
+    
+    <h2>2020년식</h2>
+    <ul class="eegong">
+        <li>세단</li>
+        <li>suv
+            <ul>
+                <li>산타페</li>
+                <li>쏘렌토
+                    <ol>
+                        <li>가솔린</li>
+                        <li>디젤</li>
+                    </ol>
+                </li>
+                <li>셀토스</li>
+            </ul>
+        </li>
+        <li>트럭</li>
+        <li>봉고</li>
+    </ul>
+    
 </body>
-</html> -->
+</html>
 
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -207,15 +215,22 @@
     }
     .blue{
         color:blue;
+        background-color:moccasin;
     }
     .red{
+        background-color:green;
+    }
+    .red li{
         color:red;
     }
-   ul>li>ol>li+li{
+   .blue ol li+li{
         text-decoration: underline;
         font-size: 30px;
     }
 
+    .red>li~li{
+        color:yellow
+    }
 </style>
 <body>
     <h1>중고차</h1>
@@ -223,7 +238,7 @@
 
     <h2>2021년식</h2>
     
-    <ul class="blue" style="background-color:moccasin">
+    <ul class="blue" >
         <li>세단
             <ul style="color:magenta">
                 <li>그랜저</li>
@@ -245,10 +260,10 @@
     <hr>
 
     <h2>2020년식</h2>
-    <ul style="background-color:forestgreen; color:yellow>
-        <li style="color:red">세단</li>
+    <ul class="red">
+        <li>세단</li>
         <li>suv
-            <ul style="color:red">
+            <ul >
                 <li>산타페</li>
                 <li>쏘렌토</li>
                 <li>셀토스
