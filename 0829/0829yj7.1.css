@@ -1,0 +1,53 @@
+ul {
+    list-style: none;
+}
+
+img{
+    display: none;
+}
+
+li span {
+    display: inline-block;
+    width:100px;
+    line-height: 50px;
+    margin-bottom: 3px;
+    text-align: center;
+    background-color:aqua;
+    opacity: 0.4;
+}
+
+li span:hover {
+    opacity: 1;
+}
+
+li span:hover+img {
+    display: block;
+    margin: 20px auto;
+}
+/* 
+img[src="../image/don.png"]{
+    display: none;
+}
+ul>li>:hover{
+    visibility: visible;
+}
+ul:first-child:hover {
+    display: inline-block;
+}
+
+img:hover+img{
+    visibility: visible;
+}
+
+li:first-of-type :first-child:hover+img {
+    display: inline-block;
+}
+header:nth-of-type(2) :nth-child(2):hover+img {
+    display: inline-block;
+}
+
+header>div {
+    display:block;
+    background-color:;
+
+} */
