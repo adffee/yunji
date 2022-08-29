@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        figcaption{
+            font-size: 2rem;
+        }
+        figure{
+            margin: 0;
+        }
+
+        .col{
+            width: 5vw;
+        }
+
+        tr {
+            height: 5vw;
+        }
+        
+        td {
+            background-color:cadetblue;
+        }
+        
+        /* tr:nth-of-type(2n-1) :nth-child(2n-1),
+        tr:nth-of-type(2n) :nth-child(2n){
+            background-color:rgb(32, 178, 170,30%);
+        } */
+
+        tr:nth-child(2n+1) td:nth-child(2n+1),
+        tr:nth-child(2n) td:nth-child(2n){
+            opacity: .2;
+        }
+
+        table {
+            border-collapse:collapse;
+        }
+
+        /* <border-collapse>
+        -separate:개별 셀을 독립적으로 분리하여 셀들 간의 간격 발생, 디폴드값
+        -collapse: 셀들간의 간격을 없애서 경계를 통합.
+        
+        -셀 간 간격을 독립적eparate으로 유지할 것인지, 붕괴collapse시켜서 없앨 것인지를 결정.
+        각 셀은 별도의 독립된 보더라인 설정이 가능하며, 각셀의 경계에는 일정한 간격이 존재하여 별도의 설정을 지정하지 않은 상태eparate로 보더라인을 지정하면 각 셀간의 보더라인을 따라서 일정한 간격이 발생되는 것을 확인 가능. 
+        따라서 이러한 간격을 없애고 각 셀의 보더라인이 하나로 중첩되어 통합되도록 설정하려면 collapse값을 지정.
+        단 이때 부모 요소가 된느 table태그의 bordercollapse 속성을 지정해야만 부모 자신을 포함한 하위 태그들에 대한 속상값이 적용된에 주의
+        
+        테이블은 블럭 요소임에 주의 */
+
+    </style>
+</head>
+<body>
+    <figure>
+        <figcaption> 테이블 꾸미기 </figcaption>
+        <table>
+
+            <colgroup>
+                <col class="col">
+                <col class="col">
+                <col class="col">
+                <col class="col">
+                <col class="col">
+                <col class="col">
+                <col class="col">
+                <col class="col">
+                <col class="col">
+                <col class="col">
+            </colgroup>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    </figure>
+</body>
+</html>
