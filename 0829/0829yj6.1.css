@@ -1,0 +1,27 @@
+div {
+    text-align:center;
+}
+
+/* body>:not(h1){
+    text-align:center;
+} */
+
+/* h1{
+    text-align: left;
+} */
+img{
+    width: 500px;
+    height: 500px;
+}
+a {
+    display: inline-block;
+    background-color: grey;
+    width: 50px;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+a:not([href="#"]){
+    opacity: .4;
+}
+
