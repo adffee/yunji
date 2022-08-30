@@ -1,4 +1,40 @@
-ul {
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header span{
+    display: inline-block;
+    width: 100px;
+    line-height: 50px;
+    background-color: cornflowerblue;
+    color: antiquewhite;
+    text-align: center;
+    opacity: .5;
+}
+
+header li img{
+    display: none;
+}
+
+header li {
+    margin-bottom: 1px;
+}
+
+header span:hover{
+    opacity:1;
+}
+
+header span:hover+img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    margin-left:100px;
+}
+
+/* ul {
     list-style: none;
 }
 
@@ -23,7 +59,9 @@ li span:hover {
 li span:hover+img {
     display: block;
     margin: 20px 200px;
-}
+} */
+
+
 /* 
 img[src="../image/don.png"]{
     display: none;
@@ -51,3 +89,5 @@ header>div {
     background-color:;
 
 } */
+
+
