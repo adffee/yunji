@@ -63,7 +63,7 @@ img {
 /* 높이가 결정된 부모요소 내에서의 텍스트 수평, 수직 정렬. */
 p {
     border: blue solid 2px;
-   font-size: 20px;
+    font-size: 20px;
     margin-bottom: 5px;
     height:200px;
 
