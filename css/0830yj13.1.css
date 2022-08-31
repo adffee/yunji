@@ -1,0 +1,110 @@
+
+선생님 코드
+/* body에 적용한 backgroud-image의 opacity는 적용 불가함에 주의 */
+body{
+    margin: 0;
+    background:url(../image/pagenation5.jpg) center/cover;
+    font-size:.8em;
+    text-align:center;
+    line-height: 100vh;
+}
+
+/* p 태그 내에는 다른 블럭 요소가 포함되지 못함에 주의 */
+span{
+    font: bold 1.5em normal;
+    color:darkorchid
+}
+
+body>p{
+    background:url(../image/pagenation4.jpg)0 0 /300px 300px;
+    /* background:url(../image/pagenation4.jpg)0 0/100% 100%; */
+    display:inline-block;
+    width: 300px;
+    height: 300px;
+    color:rgb(45,121,48);
+    vertical-align:middle;
+    line-height:normal;
+    /* line-height:initial; */
+    white-space:pre-line;
+    overflow:auto;
+    opacity:.8;
+}
+
+일등코드
+
+/* body{
+    background-image: url(../image/pagenation5.jpg) ;
+    background-repeat: no-repeat;
+    background-size:100vw 100vh;
+    text-align: center;
+    line-height:100vh;
+    font-size:0.8em;
+    color:green;
+    margin: 0;
+}
+
+p{
+    display:inline-block;
+    background-image: url(../image/pagenation4.jpg);
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    overflow: auto;
+    vertical-align: middle;
+    line-height: normal;
+    opacity: 0.8;
+    white-space: pre-line;
+
+}
+
+span{
+    color:blueviolet;
+    font-size:1.5em;
+    font-weight:bold;
+} */
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 0.8em;
+    background : url(../image//pagenation5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw; 
+    overflow-y: hidden;
+    line-height: 
+    text-align: center;
+}
+:root{
+    height:100%;
+}
+
+
+span{
+    font-size:1.5em;
+    color:blueviolet;
+    font-weight: bold;
+}
+
+p {
+    display:inline-block;
+    background-size: 300px 300px;
+    width:300px;
+    height:300px;
+    white-space: pre-line;
+    text-align: center;
+    overflow-y:scroll;
+    line-height: normal;
+
+    background: url(../image/pagenation4.jpg)center/ cover;
+    vertical-align:middle;
+    
+}
+
+p:not(span) {
+    color:green;
+} */
