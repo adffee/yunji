@@ -1,5 +1,5 @@
 body {
-    background-image: url(../image/starbucks_logo.jpg);
+    background-image: url(../../image/starbucks_logo.jpg);
     background-repeat: no-repeat; 
     background-position: center center;
 
@@ -62,7 +62,7 @@ body {
 
 body {
     height: 100vh;
-    background: url(../image/starbucks_logo.jpg) center/100% 100%;
+    background: url(../../image/starbucks_logo.jpg) center/100% 100%;
 
     /* 
     < background-size - cover >
@@ -77,8 +77,8 @@ body {
     축소가 가능.
     */
     
-    /* background: url(../image/starbucks_logo.jpg) center/cover; */
-    /* background: url(../image/starbucks_logo.jpg) top/cover; */
+    /* background: url(../../image/starbucks_logo.jpg) center/cover; */
+    /* background: url(../../image/starbucks_logo.jpg) top/cover; */
 }
 
 
@@ -101,11 +101,11 @@ body{
 }
 
 body {
-    background: url(../image/starbucks.jpg) no-repeat bottom right/50vw fixed yellow;
+    background: url(../../image/starbucks.jpg) no-repeat bottom right/50vw fixed yellow;
 }
 body{
     height:100vh;
-    background: url(../image/starbucks.jpg) center/100% 100% ;
-    background: url(../image/starbucks.jpg) center/cover;
-    background: url(../image/starbucks.jpg) top/ cover;
+    background: url(../../image/starbucks.jpg) center/100% 100% ;
+    background: url(../../image/starbucks.jpg) center/cover;
+    background: url(../../image/starbucks.jpg) top/ cover;
 } */

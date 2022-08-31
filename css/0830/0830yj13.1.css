@@ -3,7 +3,7 @@
 /* body에 적용한 backgroud-image의 opacity는 적용 불가함에 주의 */
 body{
     margin: 0;
-    background:url(../image/pagenation5.jpg) center/cover;
+    background:url(../../image/pagenation5.jpg) center/cover;
     font-size:.8em;
     text-align:center;
     line-height: 100vh;
@@ -16,7 +16,7 @@ span{
 }
 
 body>p{
-    background:url(../image/pagenation4.jpg)0 0 /300px 300px;
+    background:url(../../image/pagenation4.jpg)0 0 /300px 300px;
     /* background:url(../image/pagenation4.jpg)0 0/100% 100%; */
     display:inline-block;
     width: 300px;
@@ -33,7 +33,7 @@ body>p{
 일등코드
 
 /* body{
-    background-image: url(../image/pagenation5.jpg) ;
+    background-image: url(../../image/pagenation5.jpg) ;
     background-repeat: no-repeat;
     background-size:100vw 100vh;
     text-align: center;
@@ -45,7 +45,7 @@ body>p{
 
 p{
     display:inline-block;
-    background-image: url(../image/pagenation4.jpg);
+    background-image: url(../../image/pagenation4.jpg);
     background-size: 300px 300px;
     width: 300px;
     height: 300px;
@@ -72,7 +72,7 @@ span{
 
 body {
     font-size: 0.8em;
-    background : url(../image//pagenation5.jpg);
+    background : url(../../image//pagenation5.jpg);
     background-repeat: no-repeat;
     background-size: 100vw; 
     overflow-y: hidden;
@@ -100,7 +100,7 @@ p {
     overflow-y:scroll;
     line-height: normal;
 
-    background: url(../image/pagenation4.jpg)center/ cover;
+    background: url(../../image/pagenation4.jpg)center/ cover;
     vertical-align:middle;
     
 }

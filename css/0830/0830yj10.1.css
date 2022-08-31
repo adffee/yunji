@@ -9,7 +9,7 @@
    
    - url 함수에 경로를 지정하여 백그라운드 이미지 지정.
    */
-    background-image: url(../image/buger.jpg);
+    background-image: url(../../image/buger.jpg);
 }
 
 /* 
@@ -66,7 +66,7 @@
     width: 300px;
     height: 300px;
     margin-bottom: 10px;
-    background-image: url(../image/buger.jpg);
+    background-image: url(../../image/buger.jpg);
 }
 
 .repeat{

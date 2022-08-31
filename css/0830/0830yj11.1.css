@@ -16,7 +16,7 @@
 ※ 5_CSS(Cascading_Style_Sheet)-(2)_Image_sprites와IR(Image Replacement)_기법_그람판활용 - 엑셀 파일 참조
 */
 li a {
-    background-image: url("../image/sprites_img.JPG");
+    background-image: url("../../image/sprites_img.JPG");
 
     /* 인라인 요소인 a 태그에 너비와 높이를 주기위해 인라인 블럭으로 속성 변경. */
     display: inline-block;
@@ -115,7 +115,7 @@ ul {
 
 
 /* li a{
-    background-image: url(../image/sprites_img.jpg);
+    background-image: url(../../image/sprites_img.jpg);
     display: inline-block;
     width: 304px;
     height: 113px;

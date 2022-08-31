@@ -50,7 +50,7 @@ p {
 }
 
 .box3 {
-    background: url(../image/jeep.png) center/200px no-repeat;
+    background: url(../../image/jeep.png) center/200px no-repeat;
     display: inline-block;
     width: 200px;
     height: 150px;
@@ -84,7 +84,7 @@ p {
 }
 
 .box4 {
-    background: url(../image/jeep.png) center/200px no-repeat;
+    background: url(../../image/jeep.png) center/200px no-repeat;
     display: inline-block;
     width: 200px;
     height: 200px;
@@ -98,7 +98,7 @@ p {
 }
 
 .box5 {
-    background: url(../image/jeep.png) center/200px no-repeat;
+    background: url(../../image/jeep.png) center/200px no-repeat;
     display: inline-block;
     width: 300px;
     height: 200px;
@@ -107,7 +107,7 @@ p {
 }
 
 .box6 {
-    background: url(../image/jeep.png) center/200px no-repeat;
+    background: url(../../image/jeep.png) center/200px no-repeat;
     display: inline-block;
     width: 300px;
     height: 200px;
@@ -160,7 +160,7 @@ p {
 }
 
 .box3 {
-    background: url(../image/jeep.png) center/ 200px no-repeat;
+    background: url(../../image/jeep.png) center/ 200px no-repeat;
     display: inline-block;
     width: 200px;
     height: 150px;
@@ -177,7 +177,7 @@ p {
 }
 
 .box4{
-    background: url(../image/jeep.png) center/200px no-repeat;
+    background: url(../../image/jeep.png) center/200px no-repeat;
     display: inline-block;
     width: 200px;
     height: 200px;
@@ -188,7 +188,7 @@ p {
 }
 
 .box5{
-    background: url(../image/jeep.png) center/200px no-repeat;
+    background: url(../../image/jeep.png) center/200px no-repeat;
     display: inline-block;
     width: 300px;
     height: 200px;
@@ -197,7 +197,7 @@ p {
 }
 
 .box6{
-    background: url(../image/jeep.png) center/200px no-repeat;
+    background: url(../../image/jeep.png) center/200px no-repeat;
     display: inline-block;
     width: 300px;
     height: 200px;
