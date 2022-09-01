@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header,main,footer{
+    width: calc(1024px*0.8);
+    margin: auto;
+}
+header, footer {
+    background-color:antiquewhite;
+    line-height:20vh;
+}
+
+main{
+    background-color:aquamarine;
+    height:60vh;
+}
+
+section, article {
+    width: calc((1024px * 0.8)* 0.7)
+}
+section {
+    line-height: calc(60vh * 0.6);
+    background-color: gray;
+}
+
+#section_article{
+    float: left;
+}
+article{
+    line-height: calc(60vh*0.4);
+    background-color:cadetblue;
+}
+
+aside {
+    background-color: burlywood;
+    vertical-align: top;
+    line-height: 60vh;
+    width: calc((1024px * 0.8) * 0.3);
+    float: left;
+    }
+
