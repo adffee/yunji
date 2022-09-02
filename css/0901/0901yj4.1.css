@@ -1,4 +1,87 @@
-*{
+* {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ /* ================================================================================ */
+ /* out frame */
+ header,
+ main,
+ footer {
+    width: calc(1024px*0.8);
+    margin: 0 auto;
+    text-align: center;
+ }
+ 
+ header,
+ footer {
+    background-color: antiquewhite;
+    height: 20vh;
+    line-height: calc(100vh * .2);
+ }
+ 
+ main {
+    height: 60vh;
+ }
+ 
+ /* ================================================================================ */
+ /* main frame */
+ 
+ #section_article {
+    width: 70%;
+    height: 100%;
+ 
+    float: left;
+ }
+ 
+ section {
+    height: 60%;
+    background-color: darkgrey;
+    line-height: calc(100vh*0.6*0.6);
+ }
+ 
+ article {
+    height: 40%;
+    background-color: cadetblue;
+    line-height: calc(100vh*0.6*0.4);
+ }
+ 
+ aside {
+    width: 30%;
+    height: 100%;
+    background-color: burlywood;
+    line-height: calc(100vh*0.6);
+ 
+ 
+    /*
+         aside 에 float 미지정 시 aside 가 블럭요소이고 section_article 을
+         둘러싸고 aside 자신의 컨테트를 표현할 너비의 합이 section_article
+         보다 너무 작아 왼쪽에서 둘러싸지 못하고 section_article 의 하단에서
+         둘러싸는 현상이 발생되므로 반드시 aside 에 대한 float 지정 필요.
+         또는 aside 를 인라인 블럭요소로 변경함으로써 해결.
+       단, float 지정 시 main 의 높이를 지정하지 않으면 반드시 main 의
+       after 에 clear 를 걸어야만 footer 가 main 까지 치고 올라오는 것을
+       방지 가능.
+     */
+    /* float: right; */
+    /* float: left; */
+    /* display: inline-block; */
+ 
+    /*
+         또는 width 를 100% 을 지정하거나 또는 aside 가 블럭요소이므로 width 를
+         미지정하여도 결과는 동일.
+       단, 이렇게 되면 블럭요소인 aside 가 부모인 main 의 30% 가 아닌 main 의
+       너비를 다 차지하게 됨에 주의.
+     */
+    /* width: 100%; */
+    /* width: auto; */
+ }
+ 
+ /*
+     부모 main 의 높이가 이미 결정되어 있으므로 clear 를 안해도 무방.
+ */
+
+/* *{
     margin: 0;
     padding: 0;
     text-align: center;
@@ -38,6 +121,6 @@ aside {
     vertical-align: top;
     line-height: 60vh;
     width: calc((1024px * 0.8) * 0.3);
-    float: left;
-    }
+    float: right;
+    } */
 

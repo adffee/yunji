@@ -1,0 +1,67 @@
+.container{
+    background-color:deeppink;
+    width:430px;
+    display:inline-block;
+}
+
+.container div {
+    width:100px;
+    height:100px;
+    background-color: blue;
+    text-align:center;
+    line-height: 100px;
+    color: white;
+    float:left;
+}
+
+.container div:not(:nth-child(4n)) {
+    margin-right:10px;
+}
+
+.container div:nth-child(-n+12){
+    margin-bottom: 10px;
+}
+/* .container::after{
+    content: "";
+    display: block;
+    clear: left;
+} 이거 하거나 컨데이너를 인라인블럭 처리를 해서 컨테이너에 크기를 줌*/
+
+
+
+/* 
+.container{
+    float:left;
+    width:430px;
+    background-color: deeppink;
+    
+}
+
+
+.container>div {
+    background-color: blue;
+    color: white;
+
+    width:100px;
+    line-height:100px;
+
+    float:left;
+
+    text-align:center;
+
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.container>div:nth-child(4n+1){
+    margin-left: 0px;
+}
+
+.container>div:nth-child(n+13){
+    margin-bottom: 0px;
+}
+
+.container::after {
+    height:430px
+}  */
