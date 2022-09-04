@@ -1,0 +1,29 @@
+*{
+    margin: auto;
+}
+
+
+legend{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+fieldset{
+    width: 400px;
+    /* line-height: 100%; */
+    /* margin-top: 30px; */
+}
+input, select{
+    margin-left: 15px;
+}
+fieldset:not(div){
+    border: none;
+}
+
+input {
+    margin: 10px;
+    border-radius: 
+}
+
+
