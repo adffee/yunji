@@ -1,0 +1,112 @@
+.box{
+    position: fixed;
+    width: 5vh;
+    height: 5vh;
+    margin: calc((100vh - 5vh)/ 2) calc((100% - 5vh) /2);
+}
+
+.child1 ,.child2,.child3{
+    position: absolute;
+    width: calc(5vh * 5);
+    height: calc(5vh * 5);
+    text-align: center;
+    line-height: calc(5vh * 5);
+    overflow: hidden;
+    color: white;
+}
+
+.child1{
+    background-color: blue;
+    bottom: 0;
+    left: calc((100% - 5vh * 5)/ 2)
+}
+
+.child2{
+    background-color: chartreuse;
+    right: 0;
+    color: black;
+    z-index: -1;
+}
+
+.child3{
+    background-color:fuchsia;
+    left:0;
+}
+
+.child1:hover{
+    z-index: 1;
+}
+
+.child2:hover{
+    z-index: 1;
+}
+
+.child3:hover{
+    z-index: -2;
+}
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.child1, .child2, .child3{
+    width:30vh;
+    height:30vh;
+    line-height:30vh;
+    text-align: center;
+    position: absolute;
+}
+
+.box{
+    width:10vh;
+    height:10vh;
+    position: fixed;
+    margin-left:calc((100vw - 10vh) / 2);
+    margin-top:calc((100vh - 10vh) / 2);
+} 
+
+
+.child1{
+    background-color:blue;
+    color:white;
+    z-index: 3;
+    bottom: 0;
+    left:calc((10vh - 30vh)/2);
+    
+}
+.child2{
+    background-color:chartreuse;
+    right:0;
+    z-index: 2;
+}
+.child3{
+    background-color:hotpink;
+    color:white;
+    left:0;
+    z-index: 4;
+}
+
+.child1:hover{
+    background-color:blue;
+    color:white;
+    left:calc((10vh - 30vh)/2);
+    z-index: 5;
+    
+}
+.child2:hover{
+    background-color:chartreuse;
+    right:0;
+    z-index: 5;
+}
+.child3:hover{
+    background-color:hotpink;
+    color:white;
+    left:0;
+    z-index:1;
+} */
