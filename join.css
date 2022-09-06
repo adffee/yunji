@@ -1,31 +1,66 @@
 *{
-    margin: auto;
+    margin: 0 auto;
+    padding: 0;
     list-style: none;
 }
 
-
 legend{
+    text-align: center;
+    display: block;
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 50px;
+    margin: 30px;
 }
 
 fieldset{
+    /* all: unset; */
+    /* width: 100%; */
+    padding: 10px;
+    box-sizing: border-box;
     width: 500px;
-    /* line-height: 100%; */
-    /* margin-top: 30px; */
 }
-input, select{
-    margin-left: 15px;
-}
-fieldset:not(div){
+
+fieldset:not(div) {
     border: none;
 }
 
-input {
+input, select{
     margin: 10px;
-    border-radius: 
 }
+
+
+
+#required input {
+    margin: 10px;
+    border-radius:3px;
+    background-color:#fff8f8;
+}
+
+
+/*회원가입 버튼 */
+/*백그라운드 색 바꾸기 */
+
+#join{
+    all: unset;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f55555;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#join:hover{
+    background-color: #2676e0;
+}
+
+
+
 
 
 /*생년 월일 방문경로 밑에 줄 띄고 싶은데ㅎ 모르겠옴 */
