@@ -5,11 +5,12 @@
 }
 
 legend{
-    text-align: center;
+    width: 100%; 
     display: block;
     font-weight: bold;
     font-size: 30px;
-    margin: 30px;
+    margin: 30px 0;
+    border-bottom: 1px solid;
 }
 
 fieldset{
@@ -24,6 +25,7 @@ fieldset:not(div) {
     border: none;
 }
 
+
 input, select{
     margin: 10px;
 }
@@ -31,6 +33,8 @@ input, select{
 
 
 #required input {
+    all: unset;
+    padding: 10px;
     margin: 10px;
     border-radius:3px;
     background-color:#fff8f8;
@@ -45,7 +49,7 @@ input, select{
     margin-top: 20px;
     width: 100%;
     box-sizing: border-box;
-    background-color: #f55555;
+    background-color: #55555550;
     border-radius: 10px;
     text-align: center;
     padding: 20px 10px;
@@ -56,7 +60,7 @@ input, select{
 }
 
 #join:hover{
-    background-color: #2676e0;
+    background-color: #555555;
 }
 
 

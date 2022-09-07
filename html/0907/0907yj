@@ -1,0 +1,26 @@
+1. 예제
+2. 예제
+
+
+<!-- 
+    < 문제 >
+
+- 화면구현 예시와 같이 시멘틱 구조를 이용하여 네비게이션 메뉴를 구현하라.
+
+
+    < 메뉴 항목 >
+
+Design -> Overview, smart, Design Insights, Studios
+Innovation -> Overview, Charging & Services, Plug-in-Hybrid
+Sports -> Overview, Motorsports, Golf, Laureus, Esports
+Event -> Driving Events, Classic Car Travel
+
+    < 조건 >
+
+3) 메뉴의 배경 색상은 li 요소가 아닌 ul 요소에 지정.
+
+4) 상단 고정 메뉴는 float 을 활용하여 배치.
+
+
+네비 높이 가변적 
+-->
