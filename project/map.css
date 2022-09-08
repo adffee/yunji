@@ -1,0 +1,32 @@
+*{
+    margin: 0 auto;
+    padding: 00;
+    text-align: center;
+}
+
+body{
+    width: 900px;
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+    margin: 10% 0;
+}
+
+.map{
+    width:500px;
+    height: 500px;
+    background: url(./map.png) no-repeat 0/100% 100%;
+    background-size: 100%;
+}
+
+.address {
+    text-align: left;
+
+}
+
+span{
+    font-weight: bold;
+    font-size:20px;
+}
