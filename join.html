@@ -28,64 +28,60 @@
         <fieldset id="required">
             <legend>필수입력 사항 </legend>
             <div>
-                <label><strong>이름</strong>
-                    <input type="text" name="name" placeholder="이름을 입력해 주세요" required>
-                </label> 
+                <label for="name"><strong>이름</strong></label> 
+                <input id="name" type="text" name="name" placeholder="이름을 입력해 주세요" required>
             </div>
             
             
             <div>
-                <label><strong>아이디</strong>
-                    <input type="text" name="id" placeholder="사용하실 아이디를 입력해주세요 " required>
-                </label>
-
+                <label for="id"><strong>아이디</strong></label>
+                <input id="id" type="text" name="id" placeholder="사용하실 아이디를 입력해주세요 " required>
+                
                 <button id="idck">아이디 확인 </button>
             </div>
             <!-- 아이디 확인 어캐하는 지 모름,,  -->
             
     
             <div>
-                <label><strong>비밀번호</strong>
-                    <input type="password" name="psw" placeholder="최소 7자리 이상 " minlength="7" required>
-                </label>
+                <label for="password"><strong>비밀번호</strong> </label>
+                <input id="password"type="password" name="psw" placeholder="최소 7자리 이상 " minlength="7" required>
+                
             </div>
 
             <div>
-                <label><strong>비밀번호 확인</strong>
-                    <input type="password" name="psw"  minlength="7" required>
-                </label>
+                <label for="passwordck"><strong>비밀번호 확인</strong> </label>
+                <input  id="passwordck" type="password" name="psw"  minlength="7" required>
+                
             </div>
 
             <!-- 비밀번호랑 비밀번호 확인 같아야 넘어가는건 어캐하는지 모름,,  -->
             
 
             <div>
-                <label><strong>전화번호</strong>
-                    <input type="text" name="first_phone_num" value="010" minlength="3" maxlength="3" size="1" readonly required>
-                    &ndash;
-                    <input type="text" name="mid_phone_num" minlength="3" maxlength="4" size="1" required> &ndash;
-                    <input type="text" name="last_phone_num" minlength="4" maxlength="4" size="1" required>
-                </label>
+                <label for="phone"><strong>전화번호</strong> </label>
+                <input id="phone" type="text" name="first_phone_num" value="010" minlength="3" maxlength="3" size="1" readonly required>&ndash;
+                <input id="phone" type="text" name="mid_phone_num" minlength="3" maxlength="4" size="1" required> &ndash;
+                <input id="phone" type="text" name="last_phone_num" minlength="4" maxlength="4" size="1" required>
+                
             </div>
             
             <div>
-                <label> <strong>이메일</strong>
-                    <input type="text" placeholder="이메일" size="5" value="이메일">
-                    <span>@</span>
-                    <span><label><select class="form-control empty">
-                        <option value="기본">선택해주세요</option>
-                        <option value="naver.com">naver.com</option>
-                        <option value="hanmail.net">hanmail.net</option>
-                        <option value="daum.net">daum.net</option>
-                        <option value="gmail.com">gmail.com</option>
-                        <option value="nate.com">nate.com</option>
-                        <option value="hotmail.com">hotmail.com</option>
-                        <option value="outlook.com">outlook.com</option>
-                        <option value="icloud.com">icloud.com</option>
-                        <!-- <option value="_manual">직접입력</option> -->
+                <label for="e-mail"> <strong>이메일</strong> </label>
+                <input  id="e-mail" type="text" placeholder="이메일" size="5" value="이메일">
+                <span>@</span>
+                <span><label><select class="form-control empty">
+                    <option value="기본">선택해주세요</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="outlook.com">outlook.com</option>
+                    <option value="icloud.com">icloud.com</option>
+                    <!-- <option value="_manual">직접입력</option> -->
                     </select></label>
                 <!-- <button name="emailAuth" type="button"> 이메일 인증하기</button> -->
-                </label>
             </div>
         </fieldset>
 

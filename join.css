@@ -39,6 +39,25 @@ input, select{
     background-color:#eeeeee;
 }
 
+#required div{
+    display: flex;
+    width: 500px;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+}
+
+#required label{
+    margin: 0;
+    width: 250px;
+    align-items: flex-start;
+}
+
+#required input{
+    margin: 0;
+    width: 100%;
+    align-self: flex-end;
+}
 
 /*회원가입 버튼 */
 /*백그라운드 색 바꾸기 */
