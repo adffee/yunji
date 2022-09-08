@@ -1,23 +1,67 @@
-*{
-    margin:0;
-    padding:0;
-    list-style:none;
-}
-
-header, main{
-    margin:0 auto;
+/* ==================== 초기화 ==================== */
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* ==================== 전체 레이아웃 ==================== */
+  header,
+  main {
     width: 600px;
-}
-
-nav>ul {
-    background-color:black;
-    color: white;
-}
-
-nav>ul>li{
-    width:calc(600px * 0.25);
-    float:left;
-}
+    margin: 0 auto;
+  }
+  
+  header nav li {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  
+  /* ==================== 메인 메뉴 ==================== */
+  nav>ul>li {
+    float: left;
+    width: 25%;
+    padding: 0 20px;
+    line-height: 40px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  nav>ul {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  nav>ul::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ==================== 서브 메뉴 ==================== */
+  nav>ul ul {
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: #444444;
+    text-align: left;
+    left: 0;
+    font-size: 0.7rem;
+  }
+  
+  nav>ul>li:hover ul {
+    display: block;
+  }
+  
+  /* ==================== 본문 ==================== */
+  p {
+    text-align: justify;
+    word-break: break-all;
+    margin-top: 20px;
+  }
 
 /* *{
     margin: 0 ;

@@ -1,26 +1,79 @@
 1. 예제
 2. 예제
 
+    <!-- 
+        < 문제 >
 
-<!-- 
-    < 문제 >
-
-- 화면구현 예시와 같이 시멘틱 구조를 이용하여 네비게이션 메뉴를 구현하라.
-
-
-    < 메뉴 항목 >
-
-Design -> Overview, smart, Design Insights, Studios
-Innovation -> Overview, Charging & Services, Plug-in-Hybrid
-Sports -> Overview, Motorsports, Golf, Laureus, Esports
-Event -> Driving Events, Classic Car Travel
-
-    < 조건 >
-
-3) 메뉴의 배경 색상은 li 요소가 아닌 ul 요소에 지정.
-
-4) 상단 고정 메뉴는 float 을 활용하여 배치.
+    - 화면구현 예시와 같이 시멘틱 구조를 이용하여 네비게이션 메뉴를 구현하라.
 
 
-네비 높이 가변적 
--->
+        < 메뉴 항목 >
+
+    Design -> Overview, smart, Design Insights, Studios
+    Innovation -> Overview, Charging & Services, Plug-in-Hybrid
+    Sports -> Overview, Motorsports, Golf, Laureus, Esports
+    Event -> Driving Events, Classic Car Travel
+
+        < 조건 >
+
+    3) 메뉴의 배경 색상은 li 요소가 아닌 ul 요소에 지정.
+
+    4) 상단 고정 메뉴는 float 을 활용하여 배치.
+
+
+    네비 높이 가변적 
+    -->
+
+3.
+4. flex-direction
+
+    < Flexbox >
+
+    - display 가 flex 로 설정된 부모요소 내의 자식항목들에 대하여 정렬과 공간 배분을 1차원적인 형태로 설계하기 위한 레이아웃 모델.
+    여기서 1차원 형태의 레이아웃이란 한번에 하나의 차원(행 또는 열) 형태로만 항목들의 레이아웃을 지정함을 의미.
+
+    flexbox 는 display 속성을 flex 또는 inline-flex 로 지정 가능.
+    flex 는 블럭수준, inline-flex 는 인라인 블럭수준으로 flexbox 를 지정.
+
+    < flex-direction >
+
+    - flexbox 내의 항목들에 대한 주축 방향으로의 배치를 결정짓는 속성.
+    flexbox 는 기본적으로 주축과 교차축으로 구성되는데 주축은 행(row) 또는 열(colume)로 지정 가능하며 교차축은 주축에 대응되는 행 또는 열을 의미.
+
+        < row >
+
+    - flex-direction 속성의 디폴트 값으로 주축의 방향을 행방향으로 설정하면서 항목들에 대한 배치 방향을 인라인 방향으로 설정.
+
+    ※ 인라인 방향이라함은 한국어나 영어는 왼쪽에서 오른쪽 방향이 기본이지만 언어 별로 인라인 방향은 달라질 수 있음에 주의.
+    따라서 한국어나 영어의 인라인 방향에 대한 시작선은 왼쪽 끝이 되고, 끝 선은 오른쪽 끝으로 설정.
+
+    
+    < row-reverse >
+
+    - 주축의 방향을 row 와 같이 행방향으로 설정하되, 항목들에 대한 배치를 인라인 방향의 역방향부터 순서대로 배치.
+    즉, 인라인 방향에 대한 시작선과 끝 선의 위치가 서로 변경.
+
+
+5. flex 의 기본 특성
+
+    주축에 나열되는 항목들은 flex 컨테이너를 채우기 위해 교차축 방향으로 항목의 크기가 늘어나는 특성.
+
+    주축에 나열되는 항목들의 크기가 주축의 크기를 벗어나는 크기를 가져도 항목들의 크기는 주축 내에서 그 크기에 맞게 자동으로 줄어들 수는 있지만 주축의 크기 범위를 넘쳐서 표현되지는 않음. ( flex-wrap : nowrap )
+
+    주축에 나열되는 항목들의 교차축 높이가 다르면 가장 높이가 높은 항목에 맞춰 다른 항목들이 교차축을 따라 그 높이에 맞추어 늘어나는 특성.
+
+    주축에 나열되는 항목의 크기가 주축의 크기를 벗어나는 크기를 가지는 경우 다른 행이나 열로 확장되어 여러개의 행이나 열로 나타나도록 하려면 flex-wrap 속성을 wrap 으로 설정.
+    이때 확장된 행이나 열은 개별적인 flex 컨테이너로 인식하여 flex-wrap 을 wrap-reverse 로 설정 시 항목별 역순이 아닌 확장된 행 또는 열 컨테이너를 기준으로 역순 배치가 되는 것을 확인 가능.
+
+6. flex-flow &amp; order
+
+    < flex-flow >
+
+    - flex-direction 과 flex-wrap 을 순서대로 지정하여 동시 설정.
+
+    < order >
+        
+    - 항목들에 순서를 임의로 지정가능하며 order 값에 대한 오름차순 순서로 배치.
+    미지정한 항목은 디폴트 0 값을 가지며 명시적 값을 지정한 항목은 오름차순 순서대로 배치.
+    또한, 음수값 지정이 가능하며 동일 순위에 대해서는 문서 순서대로 배치.
+    따라서 임의의 하나의 항목에 order 값 0 은 의미없는 지정이되며, 음수값 지정은 항목들의 최초 선두로 항목을 이동시키고 양수값 지정은 항목들의 가장 마지막 위치에 배치하는 결과.
