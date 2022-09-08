@@ -36,8 +36,7 @@ input, select{
     all: unset;
     padding: 10px;
     margin: 10px;
-    border-radius:3px;
-    background-color:#fff8f8;
+    background-color:#eeeeee;
 }
 
 
@@ -49,8 +48,7 @@ input, select{
     margin-top: 20px;
     width: 100%;
     box-sizing: border-box;
-    background-color: #55555550;
-    border-radius: 10px;
+    background-color: #666666;
     text-align: center;
     padding: 20px 10px;
     font-size: 1.2rem;
