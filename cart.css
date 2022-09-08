@@ -1,0 +1,99 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none; 
+}
+
+body{
+    width: 900px;
+}
+
+h2{
+    text-align: center;
+}
+
+div>div {
+    text-align: right;
+    color:#66666683;
+    margin: 5% 0;
+}
+span{
+    color: black;
+    font-weight: bold;
+}
+
+/***/
+table{
+    text-align: center;
+    width: 900px;
+    margin: 5% 0;
+    background-color: #eeeeee;
+}
+
+th{
+    background-color:#666666;
+    color: white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+}
+
+#cash{
+    border: none;
+    background-color: #eeeeee;
+    color: black;
+    margin: 5% 0;
+    text-align: right;
+}
+
+#cash>div {
+    padding:10px;
+}
+
+form>div {
+    text-align: right;
+}
+form>div>input {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50%;
+    border: none;
+}
+thead{
+    color: white;
+}
+#all{
+    background-color:#666666;
+    color:white;
+}
+
+form>div>input:hover {
+    background-color:#666666
+}
+
+
+
+/* <fieldset id="cart">
+<ul>
+    <li><input class="checkbox" type="checkbox">
+        
+    </li>
+    <li><input class="checkbox"  type="checkbox"></li>
+    <li><input class="checkbox"  type="checkbox"></li>
+    <li><input class="checkbox"  type="checkbox"></li>
+
+    장바구니에 담긴 상품이 없습니다. 
+</ul>
+
+</fieldset> */
+/* 
+#cart{
+    border: none;
+    background-color: #eeeeee;
+    padding: 20px;
+    /* opacity: 10%; */
+    margin: 5% 0;
+} */

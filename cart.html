@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./cart.css">
+</head>
+<body>
+    <div>
+        <h2><strong>CART</strong></h2>
+        <div><span> 01 장바구니 ></span> 02 주문서작성 결제 > 03 주문완료 </div>
+    <form action="#">
+        <table>
+            <thead>
+                <colgroup>
+                    <col style="width:3%">
+                    <col>               
+                    <col style="width:10%">  
+                    <col style="width:10%"> 
+                </colgroup>
+
+                <tr>
+                    <th>
+                        <input type="checkbox" id="allcheck1"  checked="checked">
+                    </th>
+                    <th>상품/옵션 정보</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">상품금액</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>레터링케이크</td>
+                    <td>1</td>
+                    <td>35,000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>레터링케이크</td>
+                    <td>1</td>
+                    <td>35,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <fieldset id="cash">
+            <div> 총 0 개의 상품 금액 0원</div>
+            <div>배송비 0원</div>
+            <hr>
+
+            <div id="all">합계 0원 </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="선택주문">
+            <input type="submit" value="전체주문">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
