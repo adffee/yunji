@@ -1,0 +1,44 @@
+1. 예제 
+2. 예제
+3. 예제
+4. grid-template-columns(rows), grid-template, column(row)-gap, gap
+
+    < Grid >
+    - Flexbox 의 발전 형태로 테이블과 같이 행과 열을 기준으로 하는 2차원 형태의 레이아웃을 설계 가능한 모델.
+
+    < grid-template-columns >
+    - 개별 열에 대한 너비를 지정.
+
+    < grid-template-rows >
+    - 개별 행에 대한 높이를 지정.
+
+    ※ auto : 너비나 높이를 자동으로 컨텐트의 크기에 맞추거나 남는 공간에대해서 자동으로 확장.
+
+    < grid-template >
+    - 행과 열에 대한 각각의 높이와 너비를 동시에 지정.
+
+    형식 :grid-template : 
+    [ grid-template-rows ] / 
+    [ grid-template-columns ]
+
+    < column-gap >
+    - 열 사이의 간격을 지정.
+
+    < row-gap >
+    - 행 사이의 간격을 지정.
+
+    < gap >
+    - 행 사이와 열 사이의 간격을 동시 지정.
+    ※ normal : column-gap, row-gap, gap 속성의 디폴트 값.
+
+5. repeat 함수와 fr(Fraction)
+
+    < repeat 함수 >
+    - repeat 함수를 통해 연속적이고 반복적인 값을 축약.
+    형식:repeat( 반복할 행 또는 열의 횟수, 반복할 행 또는 열의 크기 )
+    
+    < fr(Fraction)>
+    - fraction : 부분
+    - Grid 레이아웃에서 아이템들의 행 또는 열방향에 대한 상대적 비율 단위.
+
+6. 
