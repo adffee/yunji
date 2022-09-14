@@ -1,0 +1,94 @@
+.logo {
+    background-color:blueviolet;
+}
+.menu {
+    background-color:yellowgreen;
+}
+.contents {
+    background-color:coral;
+}
+.aside {
+    background-color:cadetblue;
+}
+.footer {
+    background-color:deeppink;
+}
+
+#grid_container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#grid_container {
+    display: grid;
+
+    width: 100vh;
+    height: 100vh;
+
+    grid-template: 1fr 3fr 1fr / 1fr 1fr .5fr .5fr;
+    grid-template-areas:
+    "logo menu . ."
+    "contents contents aside aside"
+    ". footer footer .";
+}
+
+.logo {
+    grid-area:logo;
+}
+.menu {
+    grid-area:menu;
+
+}
+.contents {
+    grid-area:contents;
+}
+.aside {
+    grid-area:aside;
+}
+.footer {
+    grid-area:footer;
+}
+
+/* .logo {
+    background-color:blueviolet;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.menu {
+    background-color:yellowgreen;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.contents {
+    background-color:coral;
+    grid-row: 2/5;
+    grid-column: 1/3;
+}
+.aside {
+    background-color:cadetblue;
+    grid-row:2/5;
+    grid-column:3/-1;
+}
+.footer {
+    background-color:deeppink;
+    grid-row:5/6;
+    grid-column:2/-2;
+}
+
+#grid_container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    color: white;
+}
+
+#grid_container {
+    display: grid;
+    width: 100vh;
+    height: 100vh;
+
+    grid-template: repeat(5 , 1fr) / repeat(2, 1fr) repeat( 2, .5fr);
+} */
