@@ -80,8 +80,7 @@ console.log();
 console.log(8 / 0);           // Infinity : 양의 무한대
 console.log(-8 / 0);          // -Infinity : NEGATIVE_INFINITY(음의 무한대)
 console.log('string' / 0);    // NaN : Not-a-Number
-console.log();
-
+console.log('string' / 0);  
 
 /*
     < NaN의 특성과 타입 체크 시 주의점 >
