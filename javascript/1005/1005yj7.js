@@ -42,49 +42,49 @@ value1 = initialize, value2 = initialize
 
 */
 
-let value1;
-let value2;
+// let value1;
+// let value2;
 
-if (isNaN(value1 + value2)) { // 둘다 혹은 둘중하나 undefined
-    value1 === value2 ? (value1 = 'initialize', value2 = 'initialize') : (isNaN(value1 + 1) ? value1 = 'initialize' : value2 = 'initialize');
-} else {
-    console.log('모든 변수에 초기화가 이미 되어있습니다.');
-}
+// if (isNaN(value1 + value2)) { // 둘다 혹은 둘중하나 undefined
+//     value1 === value2 ? (value1 = 'initialize', value2 = 'initialize') : (isNaN(value1 + 1) ? value1 = 'initialize' : value2 = 'initialize');
+// } else {
+//     console.log('모든 변수에 초기화가 이미 되어있습니다.');
+// }
 
-console.log(`value1 = ${value1}, value2 = ${value2}`);
+// console.log(`value1 = ${value1}, value2 = ${value2}`);
 
 
-'use strict';
+// 'use strict';
 
-let value1 = 1232;
-let value2;
+// let value1 = 1232;
+// let value2;
 
-if (isNaN(value1 + value2)) {
-    value1 === undefined ? value1 = 'initialize' : '';
-    value2 === undefined ? value2 = 'initialize' : '';
-} else {
-    console.log(`모든 변수에 초기화가 이미 되어있습니다`);
-}
+// if (isNaN(value1 + value2)) {
+//     value1 === undefined ? value1 = 'initialize' : '';
+//     value2 === undefined ? value2 = 'initialize' : '';
+// } else {
+//     console.log(`모든 변수에 초기화가 이미 되어있습니다`);
+// }
 
-console.log(`value1 = ${value1}, value2 = ${value2}`);
+// console.log(`value1 = ${value1}, value2 = ${value2}`);
 
 ////선생님
 
-let value1 = null;
-let value2 = 5;
+// let value1 = null;
+// let value2 = 5;
 
-if (isNaN(value1 + value2)) {
-    if (value1 === undefined) {
-        value1 = 'initialize';
-    }
-    if (value2 === undefined) {
-        value2 = 'initialize';
-    }
-} else {
-    console.log(`모든 변수에 초기화가 이미 되어있습니다`);
-}
+// if (isNaN(value1 + value2)) {
+//     if (value1 === undefined) {
+//         value1 = 'initialize';
+//     }
+//     if (value2 === undefined) {
+//         value2 = 'initialize';
+//     }
+// } else {
+//     console.log(`모든 변수에 초기화가 이미 되어있습니다`);
+// }
 
-console.log(`value1 = ${value1}, value2 = ${value2}`);
+// console.log(`value1 = ${value1}, value2 = ${value2}`);
 
 ///선생님
 
