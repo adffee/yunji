@@ -1,0 +1,23 @@
+div.scrollTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+}
+
+div.scrollTop.visible {
+  opacity: .5;
+  visibility: visible;
+  transition: all .5s;
+}
+
+div.scrollTop.hover {
+  opacity: 1;
+  cursor: pointer;
+  padding: 10px 20px;
+}

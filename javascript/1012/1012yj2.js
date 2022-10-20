@@ -26,7 +26,7 @@ document.write('<caption>< 재고품목 ></caption>');
 
 document.write('<tr>');
 for (let i = 0; i < itemName.length; i++) {         // 항목이 늘어나도 배열을 활용함으로써 반복문 적용을 통해 코드 압축 가능.
-   document.write(`<th>${itemName[i]}</th>`);
+    document.write(`<th>${itemName[i]}</th>`);
 }
 document.write('</tr>');
 

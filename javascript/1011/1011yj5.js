@@ -16,22 +16,22 @@
 
 
 
-let a1 = [1, 2, 3],
-    a2 = [11, 12, 13],
-    a3 = [21, 22, 23];
+// let a1 = [1, 2, 3],
+//     a2 = [11, 12, 13],
+//     a3 = [21, 22, 23];
 
-let resultAr;
+// let resultAr;
 
-function joinAr(...arrays) {
+// function joinAr(...arrays) {
 
-    resultAr = arrays;
-}
+//     resultAr = arrays;
+// }
 
-joinAr(a1, a2, a3);
+// joinAr(a1, a2, a3);
 
-for (let i = 0; i < resultAr.length; i++) {
-        console.log(resultAr[i]);
-}
+// for (let i = 0; i < resultAr.length; i++) {
+//         console.log(resultAr[i]);
+// }
 
 
 
