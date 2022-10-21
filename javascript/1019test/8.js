@@ -5,9 +5,13 @@
 'use strict'
 
 const arr = ['We', 'are', 'the', 'world!',];
+const tmp = [];
 
-function me(arr) {
-    for (let i = 0; i < arr.length; i++){
-        
+function me (ar) {
+    for (let i = 0; i < ar.length; i++){
+        tmp[i] = ar[i].length;
     }
+    console.log(tmp);
 }
+
+me(arr);

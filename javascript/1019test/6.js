@@ -9,15 +9,43 @@
 
 'use strict';
 
+// const box = [6, 66, 16, 62, 64, 26, 60,];
+
+// let v;
+// let s = 0;
+// v = box.join('');
+// console.log(v)
+
+// for (let i = 0; i < v.length; i++) {
+//     if (v[i] === '6') {
+//         ++s;
+//     }
+// }
+// console.log(s);
+
+
+///수진이 코드
+
+// let v = 0;
+// const box = [ 6, 66, 16, 62, 64, 26, 60, ];
+// const array = [ , ];
+// // 음.. box.join('')이거를 box에 저장하고 index 돌릴려고 했는데 저장안됨
+// // 숫자 카운팅을 6찾는 수에 맞춰 카운팅하게 v를 넣고, v 출력해야 하니깡 외부에 변수선언함.
+// for(let i = 0, sub = 0; ;) {
+//     sub = box.join('').indexOf('6', i);
+//     if(sub == -1) break;
+//     v++;
+//     i = sub + 1;
+// }
+// console.log(v);
+
 const box = [6, 66, 16, 62, 64, 26, 60,];
+const joinBox = box.join('');
+let v = 0;
 
-let v;
-let s = 0;
-v = box.join('');
-
-for (let i = 0; i < v.length; i++) {
-    if (v[i] === '6') {
-        ++s;
+for (let i = 0; i < joinBox.length; i++) {
+    if (joinBox[i] === '6') {
+        v++;
     }
 }
-console.log(s);
+console.log(v);
