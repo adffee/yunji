@@ -8,6 +8,15 @@
 
 let button = document.getElementsByTagName('button'),
     h1 = document.getElementsByTagName('h1');
+    
+button[0].addEventListener('click', () => {
+    if (h1[0].textContent === '대충 제목') {
+        h1[0].textContent = '바뀜';
+    } else {
+        h1[0].textContent = '대충 제목';
+    }
+});
+
 
 // console.log(button[0].textContent);
 // if (h1[0].textContent === '대충 제목') {
@@ -25,13 +34,6 @@ let button = document.getElementsByTagName('button'),
 //     h1.innerText = '구독중'
 // }
 
-button[0].addEventListener('click', () => {
-    if (h1[0].textContent === '대충 제목') {
-        h1[0].textContent = '바뀜';
-    } else {
-        h1[0].textContent = '대충 제목';
-    }
-});
 
 // function changeBtnName()  {
 //     const button = document.getElementsByTagName('button'),

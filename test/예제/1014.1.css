@@ -1,0 +1,20 @@
+img {
+    width: 500px;
+    height: 500px;
+}
+
+div {
+    text-align: center;
+}
+
+div a {
+    display: inline-block;
+    width:50px;
+    line-height: 50px;
+    background-color: silver;
+    text-decoration: none;
+}
+
+div a:not([href="#"]) {
+    opacity: .4;
+}
