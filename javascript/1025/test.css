@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    grid-template-areas: 
+    "a b";
+    background-color:antiquewhite;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+.logo_page {
+    grid-area: a;
+    padding: 20px;
+}
+.logo_page img {
+    width:100%;
+}
+
+.service_container {
+    grid-area: b;
+    padding: 20px;
+    position: relative;
+}
+.service_container button {
+    position: absolute;
+    right: 26px;
+    top : 16px;
+}
+.service_container h1 {
+    margin-top : 0;
+}
+.service_container ul * {
+    padding: 5px;
+    list-style: none;
+}
+.service_container li {
+    margin-bottom: 10px;;
+}
+.service_header {
+    background-color: green;
+    padding-left: 10px;
+}
+.service_body {
+    background-color: lightblue;
+    padding-left: 10px;
+}
+
+.service_list p {
+    margin:0;
+    line-height: 25px;
+}
+
+.service_list p:first-child {
+    color: white;
+}
+
+.hidden p:last-child {
+    display: none;
+}

@@ -1,0 +1,77 @@
+/* ==================== 초기화 ==================== */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  text-align: justify;
+  word-break: break-all;
+}
+
+/* ==================== 전체 레이아웃 ==================== */
+body {
+  background-color: antiquewhite;
+  display: flex;
+  padding: 60px;
+  gap: 60px;
+  font-size: 1.5rem;
+}
+
+body section {
+  flex: 1;
+}
+
+/* ==================== 왼쪽 ==================== */
+section.logo_page img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* ==================== 오른쪽 ==================== */
+section.service_container {
+  position: relative;
+}
+
+button.btn_collapseAll {
+  color: blue;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+section.service_container h1 {
+  margin-bottom: 50px;
+}
+
+section.service_container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+ul li.service_list p {
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+ul li.service_list p.service_header {
+  background-color: darkslategray;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+ul li.service_list p.service_body {
+  background-color: aliceblue;
+}
+
+ul li.service_list.hidden p.service_body {
+  display: none;
+}

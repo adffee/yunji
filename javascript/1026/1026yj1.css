@@ -1,0 +1,300 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+    margin: 10px;
+}
+header{
+    display: flex;
+    background-color: lightgoldenrodyellow;
+    flex-direction: column;
+    gap: 5
+}
+
+
+.menu{
+    gap: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li {
+    background-color: mediumseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li a {
+    color:white;
+    text-decoration:none;
+    line-height: 50px;
+    width:100px;
+    display:block;
+
+}
+
+.contents{
+    background-color: lightblue;
+}
+
+main {
+    background-color:coral;
+} */
+
+/*태현이 코드*/
+
+/* 
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+background-color: gold;
+}
+
+header {
+display: flex;
+background-color: gold;
+flex-direction: column;
+gap: 5px;
+width: 100%;
+position: fixed;
+top: 0;
+padding-bottom: 5px;
+}
+
+.menu {
+display: flex;
+justify-content: center;
+gap: 2.5px;
+}
+
+.menu a {
+width: 100px;
+display: block;
+text-decoration: none;
+background-color: darkgreen;
+text-align: center;
+line-height: 30px;
+color: #fff;
+letter-spacing: 3px;
+}
+
+.contents {
+display: flex;
+justify-content: center;
+}
+
+.contents div {
+width: 305px;
+display: none;
+background-color: aquamarine;
+padding: 10px;
+}
+
+.contents div:target {
+display: block;
+}
+
+main {
+margin-top: 200px;
+padding: 5px;
+}
+
+main p {
+background-color: coral;
+padding: 5px;
+} */
+
+
+/*선생님 코드*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: khaki;
+    margin: 0 1%;
+}
+
+header {
+    /*
+        header 를 fixed 로 설정하고 옵셋을 지정함으로써 부모가 인접한 body 가
+        아닌 뷰포트가 됨에 주의.
+        또한 body 내에 header 를 맞추기 위해서 body 의 좌우 마진을 감안하여
+        너비 지정.
+    */
+    position: fixed;
+    top: 0;
+    width: 98%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    /* 
+        main 스크롤 시 header 의 menu 와 contents 부분을 제외한 좌우 부분에
+        main 이 나타나지 않도록 하기 위해 body 와 동일한 백그라운드 색상 지정.
+    */
+    background-color: khaki;
+
+    /* 
+        header 와 main 이 항상 일정한 간격을 유지하기 위한 하단 패딩 설정.
+        header 가 fixed 로 설정되어 마진은 적용되지 않음에 유의.
+    */
+    padding-bottom: .625em;
+}
+
+main {
+    background-color: rgb(242, 173, 150);
+    margin-top: 11em;
+    padding: .625em;
+}
+
+header .menu,
+header .contents {
+    width: 60%;
+}
+
+/* ============================================================================= */
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .3125em;
+}
+
+header .menu>li {
+    width: 33%;
+}
+
+header .menu a {
+    background-color: darkseagreen;
+    color: aliceblue;
+    letter-spacing: .4em;
+    padding-left: .4em;
+    line-height: 2.5em;
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ============================================================================= */
+
+header .contents {
+    background-color: rgb(202, 232, 244);
+}
+
+header .contents div {
+    padding: 10px;
+    display: none;
+}
+
+header .contents div:target {
+    display: block;
+}
+
+
+/*선생님 < sticky > 버전 */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: khaki;
+    margin: 0 1%;
+}
+
+header {
+    /* 
+        < sticky >
+
+    - 기본적으로 offset 지정전에는 relative 와 같이 static 특성을 가지되,
+      offset 을 지정한 후에는 해당 위치를 기준으로 요소의 스크롤이 발생하는
+      위치를 기준으로 fixed 와 같이 뷰포트에 고정.
+      단, 해당 요소가 컨테이닝 블록의 끝 모서리를 만나는 순간 고정되는 특성이
+      해제.
+      컨테이닝 블럭은 가장 가까운 부로 요소로 결정이 되지만, 해당 부모 요소가
+      스크롤되는 요소가 아닌 경우에는 고정되는 특성은 적용되지 않음에 주의.
+    */
+
+    /* fixed 를 sticky 로 수정 */
+    position: sticky;
+    top: 0;
+    /* width 삭제 : 블럭요소이므로 width 불필요 */
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: khaki;
+
+    padding-bottom: .625em;
+}
+
+main {
+    /* maring-top 삭제 */
+    background-color: rgb(242, 173, 150);
+    padding: .625em;
+}
+
+header .menu,
+header .contents {
+    width: 60%;
+}
+
+/* ============================================================================= */
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .3125em;
+}
+
+header .menu>li {
+    width: 33%;
+}
+
+header .menu a {
+    background-color: darkseagreen;
+    color: aliceblue;
+    letter-spacing: .4em;
+    padding-left: .4em;
+    line-height: 2.5em;
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ============================================================================= */
+
+header .contents {
+    background-color: rgb(202, 232, 244);
+}
+
+header .contents div {
+    padding: 10px;
+    display: none;
+}
+
+header .contents div:target {
+    display: block;
+}
