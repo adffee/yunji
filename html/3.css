@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div#grid-container {
+    margin: 0 auto;
+    width: 1320px;
+    background-color: hotpink;
+}
+  
+div.guide {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    height: 100vh;
+    gap: 28px;
+    margin: 0 20px;
+}
+  
+div.guide div {
+    background-color: pink;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
