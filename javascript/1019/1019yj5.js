@@ -17,7 +17,7 @@ let btn = document.getElementsByTagName('button');
 console.log(location.href);
 
 btn[0].addEventListener('click', () => {
-  location.href = './html/changePage.html';
+  location.href = './1019yj5.html';
 });
 
 // ==================================================================================
@@ -68,7 +68,7 @@ btn[1].addEventListener('click', () => {
       target 에 '_self' 값이 할당되었으므로 현재 페이지에 로드.
       이 때에는 features 를 지정하더라도 무시.
   */
-  window.open('./html/changePage.html', '_self');
+  window.open('./1019yj5.html', '_self');
 });
 
 // ==================================================================================
@@ -80,7 +80,7 @@ btn[2].addEventListener('click', () => {
       target 에 '_self' 값이 할당되지 않는이상 디폴트로 "_blank" 가 할당되고
       features 인자가 생략되었으므로 새로운 탭에 로드.
   */
-  open('./html/changePage.html');
+  open('./1019yj5.html');
 });
 
 // ==================================================================================
@@ -102,7 +102,7 @@ btn[3].addEventListener('click', () => {
   */
 
   // features 인자가 지정되었으므로 새로운 팝업창에 로드.
-  popup1 = open('./html/changePage.html', '팝업창1', 'width=300px, height=300px');
+  popup1 = open('./1019yj5.html', '팝업창1', 'width=300px, height=300px');
 });
 
 // ==================================================================================
@@ -166,7 +166,7 @@ btn[4].addEventListener('click', () => {
   - 브러우저 창의 참조를 통해 창의 너비와 높이를 outerWidth 와 outerHeight 로 동적
     변경 가능한 메서드.
   */
-  popup2 = open('./html/changePage.html', '팝업창2', `width=300px, height=300px, left=${locationX}px, top=${locationY}px`);
+  popup2 = open('./1019yj5.html', '팝업창2', `width=300px, height=300px, left=${locationX}px, top=${locationY}px`);
   popup2.resizeTo(300, 300);
 
   /* 
