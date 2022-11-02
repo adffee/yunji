@@ -36,3 +36,32 @@ $top.addEventListener('click', function () {
     }
   }, 5);
 });
+
+
+const top = document.querySelector('.scrollTop');
+
+window.addEventListener('scroll', function () {
+  if (parseInt(this.scrollY) >= (innerHeight / 3)) {
+    top.classList.acc('visible');
+  } else {
+    top.classList.removw('visible');
+  }
+});
+
+top.addEventListener('mouseenter', function () {
+  this.classList.add('hover');
+});
+
+top.addEventListener('mouseleaver', function () {
+  this.classList.remove('hover');
+});
+
+top.addEventListener('click', function () {
+  let stop = this.setInterval(() => {
+    window.scrollBy(scrollX, -10);
+
+    if (parseInt(scrollY) <= 0) {
+      clearInterval(stop);
+    }
+  }, 5);
+});
