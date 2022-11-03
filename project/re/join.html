@@ -4,50 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./join.css">
     <title>Document</title>
+    <link rel="stylesheet" href="./join.css">
 </head>
 <body>
-    <ul>
-        <li> 이용약관 & 본인인증 </li>
-        <li> 정보입력 </li>
-        <li> 완료 </li>
-    </ul>
-        
-    <div class="main">
-        <div class="all"> 
-            <input type="checkbox" id="all">
-            <label for="all">모든 약관을 확인하고 전체 약관에 동의합니다</label> </input>
-        </div>
+<form>
+        <fieldset class="required">
+            <legend>필수 입력사항</legend>
+            
+            <div>
+                <label for="name">이름</label>
+                <input type="text" id="name" required placeholder="이름을 입력해 주세요">
+            </div>
     
-        <div>
-            <input type="checkbox" id="c1" required> <label for="c1">이용약관 동의 <span>(필수)</span></label></input>
-        </div>
+            <div>
+                <label for="pw">비밀번호</label>
+                <input type="text" id="pw" required placeholder="최소 7자리 이상" minlength="7">
+            </div>
+            <div>
+                <label for="pwcf">비밀번호확인</label>
+                <input type="text" id="pwcf" required minlength="7">
+            </div>
     
-        <div class="info">
-            제1조~ 
-        </div>
+            <div>
+                <label for="phone">전화번호</label>
+                <input type="text" id="phone" required placeholder="-제외 번호만 입력하세요">
+            </div>
     
-        <div>
-            <input type="checkbox" id="c2" required> <label for="c2">개인정보 수집 및 이용 <span> (필수) </span></label> </input>
-        </div>
+            <div>
+                <label for="email">이메일</label>
+                <input type="email" id="email" required placeholder="이메일">
+                <input type="text"  required placeholder="직접입력">
+                <select name="email">
+                    <option value="none" selected>직접입력</option>
+                    <option value="naver">naver.com</option>
+                    <option value="daum">daum.com</option>
+                    <option value="nate">nate.com</option>
+                    <option value="gmail">gmail.com</option>
+                </select>
+            </div>
     
-        <div class="info">
-            제1조~ 
-        </div>
-        <div>
-            <input type="checkbox" id="c3"> <label for="c3">개인정보 수집 및 이용 및 광고성 정보/ 이벤트 수신동의 <span> (선택) </span> </label></input>
-        </div>
+            <div>
+                <label for="address">주소</label>
+                <input type="text" id="address">
+                <button>우편번호 검색</button>
+                <input type="text" placeholder="상세주소 입력">
+            </div>
+        </fieldset>
     
-        <div class="info">
-            제1조~ 
-        </div>
     
-        <div>
-            <button type="button">회원가입</button>
-        </div>
-    </div>
+        <fieldset class="choose">
+            <legend>선택사항</legend>
+    
+            <div>
+                <label for="birth">생년월일</label>
+                <input type="text" id="birth" placeholder="예시 19940105">
+            </div>
+    
+            <div>
+                <div>빙문경로</div>
+                <div>
+                    <input type="checkbox" id="blog">
+                    <label for="blog">블로그, 카페</label>
+                    <input type="checkbox" id="friend">
+                    <label for="friend">지인</label>
+                    <input type="checkbox" id="sns">
+                    <label for="sns">sns</label>
+                    <input type="checkbox" id="search">
+                    <label for="search">포털검색</label>
+                </div> 
+            </div>
+        </fieldset>
+    
+    
+        <fieldset class="agree">
+            <legend>약관동의</legend>
+    
+            <div>
+                <input type="checkbox" id="ck1" required>
+                <label for="ck1">만 14세 이상입니다.</label>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="ck2" required>
+                <label for="ck2"> <a href="">이용약관 (필수)</a>
+                </label>
+    
+            </div> 
+    
+            <div>
+                <input type="checkbox" id="ck3" required>
+                <label for="ck3"><a href="">개인정보수집 및 이용동의(필수)</a> </label>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="ck4">
+                <label for="ck3"> <a href="">이벤트, 쿠폰, 특가 알림 메일 및 sms 등 수신(선택)</a> </label>
+            </div>
+        </fieldset>
+    
+        <button class="joinbt">회원가입하기</button>
+</form>
 
 </body>
-</h
-tml>
+</html>

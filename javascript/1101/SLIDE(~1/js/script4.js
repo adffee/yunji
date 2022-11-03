@@ -1,4 +1,4 @@
-// ==================== 노드 가져오기 및 기초 작업 ====================
+0// ==================== 노드 가져오기 및 기초 작업 ====================
 const $body = document.querySelector('body'),
   $main_container = $body.querySelector('.main_container'),
   $slide_list = $main_container.querySelector('.slide_list'),
@@ -22,8 +22,7 @@ for (let i = 0; i < images.length; i++) {
   $slide_list.appendChild(li);
 }
 // 여기까지
-
-const $li = $slide_list.querySelectorAll('li');
+-const $li = $slide_list.querySelectorAll('li');
 
 // 페이저 버튼 만들기
 for (let i = 0; i < $li.length; i++) {
