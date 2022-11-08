@@ -1,0 +1,46 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_container {
+  width: 500px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.nation_container {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+
+#main_container img {
+  width: 300px;
+  height: 500px;
+}
+
+.nationBox {
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: silver;
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.nationBox:first-child {
+  opacity: 1;
+}
