@@ -1,9 +1,9 @@
 import Parent from "./Parent";
 
 function App() {
-  return (
+    return (
     <Parent parentName="박성연"/>
-  );
+    );
 }
 
 export default App;
