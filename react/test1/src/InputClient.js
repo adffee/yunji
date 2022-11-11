@@ -1,61 +1,96 @@
-
 import { useState } from "react";
 
-export default function InputOutputClient() {
-    const [clientName, setClientName] = useState(''),           // 고객명 출력 변수.
-        [clientNum, setClientNum] = useState(''),               // 고객번호 출력 변수.
 
-        [clientNameValue, setClientNameValue] = useState(''),
-        [clientNumValue, setClientNumValue] = useState('');
+function onChangeValue(e) {
+    setslist({
+        ...list,
+        e.target.value,
+    })
+}
 
-    function onChangeInput(setter, e) {
-        setter(e.target.value);
+//배열 하나로 만들기 ?
+function NameList() {
+    const [name, setName] = useState('');
+    const [nameList, setNameList] = useState([]);
+    const namesJSX = [];
+
+    function onChangeInput(e) {
+        setName(e.target.value);
     }
 
-    function checkEnter(e) {
-        if (e.key === 'Enter') {
-            confirm();
+    function onClickButton() {
+        if (name) {
+            setNameList([...nameList, name]);
+            setName('');
         }
     }
 
-    function confirm() {
-        setClientName(clientNameValue);
-        setClientNum(clientNumValue);
+
+    //컴포넌트로 빼기 
+
+    for (let i = 0; i < nameList.length; i++) {
+        namesJSX.push((<div key={`${nameList[i]}-${i}`}>{nameList[i]}</div>));
     }
 
-    function tryagain() {
-        setClientNameValue('');
-        setClientNumValue('');
+    return (
+        <>
+            <p>&lt; 직원 명단 &gt;</p>
+            {namesJSX}
+            <input
+                style={{ marginTop: '20px' }}
+                type="text"
+                onChange={onChangeInput}
+                value={name}
+            />
+            <button onClick={onClickButton}>명단 추가</button>
+        </>
+    );
+}
+
+export default NameList;
+
+
+
+
+//도진이
+
+import { useState } from "react";
+
+export default function QUEST() {
+
+    const [name, setName] = useState({
+        stName: '',
+        stNameValue: '',
+    });
+    const [list, setlist] = useState([]);
+
+    function onChangeName(e) {
+        setName({
+            ...name,
+            stNameValue: e.target.value,
+        });
+    }
+
+    function confirm() {
+        setName({
+            ...name,
+            stName: name.stNameValue,
+        });
+        setlist([...list, (<div>{name.stNameValue}</div>)]);
     }
 
     return (
         <>
             <div>
-                <label>고객명
-                    <input name='clientName'
-                        type="text"
-                        placeholder='이름을 입력하세요'
-                        value={clientNameValue}
-                        onChange={e => onChangeInput(setClientNameValue, e)}
-                        onKeyDown={checkEnter}
-                    />
-                </label>
-                <label>고객번호
-                    <input name='clientNum'
-                        type="text"
-                        placeholder="고객번호를 입력하세요"
-                        value={clientNumValue}
-                        onChange={e => onChangeInput(setClientNumValue, e)}
-                        onKeyDown={checkEnter}
-                    />
-                </label>
-                <button onClick={confirm}>확인완료</button>
-                <button onClick={tryagain}>다시입력</button>
+                직원명단
             </div>
-
+            <br />
             <div>
-                {clientName} 고객님의 고객번호는 {clientNum} 입니다
+                {list}
             </div>
+            <br />
+            <input type="text" onChange={onChangeName} />
+            <button onClick={confirm}>명단추가</button>
         </>
-    );
+    )
 }

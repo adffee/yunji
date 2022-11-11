@@ -351,3 +351,303 @@ export default function InputOutputClient() {
         </>
     );
 }
+
+/////////////////태현이가 보낸  전개구문적용
+
+import { useState } from "react";
+
+function InputClient() {
+    const [inputData, setInputData] = useState({
+        clientName: {
+        input: '',
+        output: '',
+        },
+        clientNumber: {
+        input: '',
+        output: '',
+        },
+    });
+
+    const { clientName, clientNumber } = inputData;
+
+    function onChangeValue(e) {
+        setInputData({
+        ...inputData,
+        [e.target.className]: {
+            ...[e.target.className],
+            input: e.target.value,
+        }
+        });
+    }
+
+    function onKeyDownInput(e) {
+        if (e.keyCode === 13) {
+        confirm();
+        }
+    }
+
+    function confirm() {
+        setInputData({
+        ...inputData,
+        clientName: {
+            ...clientName,
+            output: clientName.input,
+        },
+        clientNumber: {
+            ...clientNumber,
+            output: clientNumber.input,
+        }
+        });
+    }
+
+    function tryAgain() {
+        setInputData({
+        ...inputData,
+        clientName: {
+            ...clientName,
+            input: '',
+        },
+        clientNumber: {
+            ...clientNumber,
+            input: '',
+        }
+        });
+    }
+
+    return (
+        <>
+        <div>
+            <label> 고객명
+            <input
+                type="text"
+                className="clientName"
+                placeholder="이름을 입력하세요"
+                onChange={onChangeValue}
+                onKeyDown={onKeyDownInput}
+                value={clientName.input}
+            />
+            </label>
+            <label> 고객번호
+            <input
+                type="text"
+                className="clientNumber"
+                placeholder="고객번호를 입력하세요"
+                onChange={onChangeValue}
+                onKeyDown={onKeyDownInput}
+                value={clientNumber.input}
+            />
+            </label>
+            <button onClick={confirm}>확인완료</button>
+            <button onClick={tryAgain}>다시입력</button>
+        </div>
+        <div>{clientName.output}님의 고객번호는 {clientNumber.output}입니다.</div>
+        </>
+    );
+}
+
+export default InputClient;
+
+
+
+
+
+/////태현이 전개구문 2
+
+import { useState } from "react";
+
+function InputClient() {
+    // const [inputData, setInputData] = useState({
+    //   clientName: {
+    //     input: '',
+    //     output: '',
+    //   },
+    //   clientNumber: {
+    //     input: '',
+    //     output: '',
+    //   },
+    // });
+    const [inputData, setInputData] = useState({
+        clientName: '',
+        clientNumber: '',
+        clientNameOutput: '',
+        clientNumberOutput: '',
+    });
+
+    const { clientName, clientNumber, clientNameOutput, clientNumberOutput } = inputData;
+
+    function onChangeValue(e) {
+        setInputData({
+            ...inputData,
+            [e.target.className]: e.target.value,
+        });
+        // setInputData({
+        //   ...inputData,
+        //   [e.target.className]: {
+        //     ...[e.target.className],
+        //     input: e.target.value,
+        //   }
+        // });
+    }
+
+    function onKeyDownInput(e) {
+        if (e.keyCode === 13) {
+            confirm();
+        }
+    }
+
+    function confirm() {
+        setInputData({
+            ...inputData,
+            clientNameOutput: clientName,
+            clientNumberOutput: clientNumber,
+        });
+        // setInputData({
+        //   ...inputData,
+        //   clientName: {
+        //     ...clientName,
+        //     output: clientName.input,
+        //   },
+        //   clientNumber: {
+        //     ...clientNumber,
+        //     output: clientNumber.input,
+        //   }
+        // });
+    }
+
+    function tryAgain() {
+        setInputData({
+            ...inputData,
+            clientName: '',
+            clientNumber: '',
+        });
+        // setInputData({
+        //   ...inputData,
+        //   clientName: {
+        //     ...clientName,
+        //     input: '',
+        //   },
+        //   clientNumber: {
+        //     ...clientNumber,
+        //     input: '',
+        //   }
+        // });
+    }
+
+    return (
+        <>
+            <div>
+                <label> 고객명
+                    <input
+                        type="text"
+                        className="clientName"
+                        placeholder="이름을 입력하세요"
+                        onChange={onChangeValue}
+                        onKeyDown={onKeyDownInput}
+                        value={clientName}
+                    />
+                </label>
+                <label> 고객번호
+                    <input
+                        type="text"
+                        className="clientNumber"
+                        placeholder="고객번호를 입력하세요"
+                        onChange={onChangeValue}
+                        onKeyDown={onKeyDownInput}
+                        value={clientNumber}
+                    />
+                </label>
+                <button onClick={confirm}>확인완료</button>
+                <button onClick={tryAgain}>다시입력</button>
+            </div>
+            <div>{clientNameOutput}님의 고객번호는 {clientNumberOutput}입니다.</div>
+        </>
+    );
+}
+
+export default InputClient;
+
+
+
+////선생님꺼 
+import { useState } from "react";
+
+export default function InputOutputClient() {
+    const [clientInfo, setClientInfo] = useState({
+        clientName: '',
+        clientNum: '',
+        clientNameValue: '',
+        clientNumValue: '',
+    });
+
+    function onChangeInput(e) {
+        const eventOj = e.target;
+
+        if (eventOj.name === 'clientName') {
+            setClientInfo({
+                ...clientInfo,
+                clientNameValue: eventOj.value,
+            });
+        } else {
+            setClientInfo({
+                ...clientInfo,
+                clientNumValue: eventOj.value,
+            });
+        }
+    }
+
+    function checkEnter(e) {
+        if (e.key === 'Enter') {
+            confirm();
+        }
+    }
+
+    function confirm() {
+        setClientInfo({
+            ...clientInfo,
+            clientName: clientInfo.clientNameValue,
+        });
+        setClientInfo({
+            ...clientInfo,
+            clientNum: clientInfo.clientNumValue,
+        });
+    }
+
+    function tryagain() {
+        setClientInfo({
+            ...clientInfo,
+            clientNameValue: '',
+            clientNum: '',
+        });
+    }
+
+    return (
+        <>
+            <div>
+                <label>고객명
+                    <input name='clientName'
+                        type="text"
+                        placeholder='이름을 입력하세요'
+                        value={clientInfo.clientNameValue}
+                        onChange={onChangeInput}
+                        onKeyDown={checkEnter}
+                    />
+                </label>
+                <label>고객번호
+                    <input name='clientNum'
+                        type="text"
+                        placeholder="고객번호를 입력하세요"
+                        value={clientInfo.clientNumValue}
+                        onChange={onChangeInput}
+                        onKeyDown={checkEnter}
+                    />
+                </label>
+                <button onClick={confirm}>확인완료</button>
+                <button onClick={tryagain}>다시입력</button>
+            </div>
+
+            <div>
+                {clientInfo.clientName} 고객님의 고객번호는 {clientInfo.clientNum} 입니다
+            </div>
+        </>
+    );
+}
