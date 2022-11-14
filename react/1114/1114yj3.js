@@ -77,103 +77,55 @@ function App() {
     );
 }
 
-export default App;
+export default App;'use strict';
 
-////*/////
+let ar1 = [1, 2, 3, 4, 5];
 
-import { useState } from "react";
+/*
+    < fill >
 
+- 배열의 요소들을 인수값으로 초기화한 원본 배열 반환.
+  초기화한 새로운 배열이 아닌 원본 배열 자체를 초기화함에 주의.
+  offset 설정이 가능하며 end 인덱스는 포함되지 않아 end 직전까지만 지정.
 
-function onChangeValue(e) {
-    setslist({
-        ...list,
-        e.target.value,
-    })
-}
+형식    :   Array<any>.fill(value: any, start?: number | undefined, end?: number | undefined): any[]
 
-//배열 하나로 만들기 ?
-function NameList() {
-    const [name, setName] = useState('');
-    const [nameList, setNameList] = useState([]);
-    const namesJSX = [];
+*/
+let ar2 = ar1.fill(5);
 
-    function onChangeInput(e) {
-        setName(e.target.value);
-    }
+console.log(ar1);
+console.log(ar2);
+console.log();
 
-    function onClickButton() {
-        if (name) {
-            setNameList([...nameList, name]);
-            setName('');
-        }
-    }
+ar2[0] = 7;
 
+console.log(ar1);
+console.log(ar2);
+console.log();
 
-    //컴포넌트로 빼기 
+/* ================================================================================================ */
 
-    for (let i = 0; i < nameList.length; i++) {
-        namesJSX.push((<div key={`${nameList[i]}-${i}`}>{nameList[i]}</div>));
-    }
+ar1.fill(0, 1, 3);      // end 인덱스 직전까지 초기화.
+console.log(ar1);
+console.log('======================');
 
-    return (
-        <>
-            <p>&lt; 직원 명단 &gt;</p>
-            {namesJSX}
-            <input
-                style={{ marginTop: '20px' }}
-                type="text"
-                onChange={onChangeInput}
-                value={name}
-            />
-            <button onClick={onClickButton}>명단 추가</button>
-        </>
-    );
-}
+/* ================================================================================================ */
 
-export default NameList;
+/* 
+    < forEach 와 map 의 특성 >
 
+- forEach, map 메서드는 크기가 할당되더라도 초기화되지 않은 상태에서는 자동 순회되지 않으며,
+  콜백함수에 익명함수나 람다식 적용시 this 는 적용되지 않음. ( undefined 반환 )
+*/
 
+let ar3 = new Array(5);
 
+ar3.forEach((v, i) => console.log(i));  // 배열의 크기가 할당되더라도 초기화되지 않아
+//                                      // 배열 순회가 되지 않음을 확인 가능.
 
-//도진이
+ar3.fill(0).forEach((v, i) => console.log(i));
+console.log();
 
-import { useState } from "react";
-
-export default function QUEST() {
-
-    const [name, setName] = useState({
-        stName: '',
-        stNameValue: '',
-    });
-    const [list, setlist] = useState([]);
-
-    function onChangeName(e) {
-        setName({
-            ...name,
-            stNameValue: e.target.value,
-        });
-    }
-
-    function confirm() {
-        setName({
-            ...name,
-            stName: name.stNameValue,
-        });
-        setlist([...list, (<div>{name.stNameValue}</div>)]);
-    }
-
-    return (
-        <>
-            <div>
-                직원명단
-            </div>
-            <br />
-            <div>
-                {list}
-            </div>
-            <br />
-            <input type="text" onChange={onChangeName} />
-            <button onClick={confirm}>명단추가</button>
-        </>
-    )
-}
+ar3.forEach(function () {   // forEach 메서드의 악명객체 내에서의 this 는 undefined 반환.
+    console.log(this);
+});
