@@ -5,100 +5,162 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/global.css">
-    <link rel="stylesheet" href="./layout2.css">
-    <link rel="stylesheet" href="./join.css">
-    <title>디자인 레이아웃 2 | KALL</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/sighup.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="shortcut icon" href="../images/kall-logo.ico" type="image/x-icon">
+
+    <meta name="description" content="주문제작 케이크를 판매하는 KALL입니다.">
+    <meta name="keywords" content="케이크, 주문제작, cake">
+    <meta name="author" content="KALL">
+    <meta name="generator" content="MS VS CODE">
+    <meta name="robots" content="index, follow">
+
+    <script defer src="./join.js"></script>
+
+    <title>회원가입 | KALL</title>
 </head>
 
 <body>
     <header>
         <h1 class="title-logo">
-        <span>KALL</span>
-        <a href="/">
-            <img src="../../images/KALL.png" alt="KALL 로고">
-        </a>
+            <span>KALL</span>
+            <a href="../index.html">
+                <img src="../images/kall-logo.png" alt="KALL 로고">
+            </a>
         </h1>
 
+        <nav>
+            <ul class="main-nav">
+                <li>
+                    <a href="../product/">주문제작</a>
+                </li>
+                <li>
+                    <a href="../design/">디자인</a>
+                </li>
+                <li>
+                    <a href="../etc/">ETC</a>
+                </li>
+                <li>
+                    <a href="../community/guide/">커뮤니티</a>
+                </li>
+            </ul>
+        </nav>
+
+        <input type="search" name="keyword" placeholder="검색어를 입력하세요">
+        <ul class="user-menu">
+            <li>
+                <a href="../sighin/" title="로그인">
+                    <span class="visually-hidden">로그인</span>
+                    <i class="fas fa-key"></i>
+                </a>
+            </li>
+            <li>
+                <a href="../sighup/" title="회원가입">
+                    <span class="visually-hidden">회원가입</span>
+                    <i class="fas fa-user-plus"></i>
+                </a>
+            </li>
+            <li>
+                <a href="../cart/" title="장바구니">
+                    <span class="visually-hidden">장바구니</span>
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
+        </ul>
     </header>
 
     <main>
-    
-    <form action="./cart.html" name="memberJoin" method="post">
-        <fieldset id="required">
-            <legend>필수입력 사항 </legend>
-            <div>
-                <label for="name"><strong>이름</strong></label> 
-                <input id="name" type="text" name="name" placeholder="이름을 입력해 주세요" required>
-            </div>
-            
-            
-            <div>
-                <label for="id"><strong>아이디</strong></label>
-                <input id="id" type="text" name="id" placeholder="사용하실 아이디를 입력해주세요 " required>
-                
-                <button id="idck">아이디 확인 </button>
-            </div>
-            <!-- 아이디 확인 어캐하는 지 모름,,  -->
-            
-    
-            <div>
-                <label for="password"><strong>비밀번호</strong> </label>
-                <input id="password"type="password" name="psw" placeholder="최소 7자리 이상 " minlength="7" required>
-                
-            </div>
+        <!-- ==================== 윤지 코드 ==================== -->
+        <form name="memberJoin" class="sighup-form">
+            <fieldset id="required">
+                <legend>필수입력 사항 </legend>
+                <div>
+                    <label for="name"><strong>이름</strong></label>
+                    <input id="name" type="text" name="name" placeholder="이름을 입력해 주세요" required>
+                </div>
 
-            <div>
-                <label for="passwordck"><strong>비밀번호 확인</strong> </label>
-                <input  id="passwordck" type="password" name="psw"  minlength="7" required>
-                
-            </div>
+                <div>
+                    <label for="id"><strong>아이디</strong></label>
+                    <input id="id" type="text" name="id" placeholder="사용하실 아이디를 입력해주세요 " required>
+                </div>
+                <!-- 아이디 확인 어캐하는 지 모름,,  -->
 
-            <!-- 비밀번호랑 비밀번호 확인 같아야 넘어가는건 어캐하는지 모름,,  -->
-            
+                <div>
+                    <label for="password"><strong>비밀번호</strong> </label>
+                    <input id="password" type="password" name="psw" placeholder="최소 7자리 이상" minlength="7" required>
+                </div>
 
-            <div>
-                <label for="phone"><strong>전화번호</strong> </label>
-                <input id="phone" type="text" name="first_phone_num" value="010" minlength="3" maxlength="3" size="1" readonly required>&ndash;
-                <input id="phone" type="text" name="mid_phone_num" minlength="3" maxlength="4" size="1" required> &ndash;
-                <input id="phone" type="text" name="last_phone_num" minlength="4" maxlength="4" size="1" required>
-                
-            </div>
-            
-            <div>
-                <label for="e-mail"> <strong>이메일</strong> </label>
-                <input  id="e-mail" type="text" placeholder="이메일" size="5" value="이메일">
-                <span>@</span>
-                <span><label><select class="form-control empty">
-                    <option value="기본">선택해주세요</option>
-                    <option value="naver.com">naver.com</option>
-                    <option value="hanmail.net">hanmail.net</option>
-                    <option value="daum.net">daum.net</option>
-                    <option value="gmail.com">gmail.com</option>
-                    <option value="nate.com">nate.com</option>
-                    <option value="hotmail.com">hotmail.com</option>
-                    <option value="outlook.com">outlook.com</option>
-                    <option value="icloud.com">icloud.com</option>
-                    <!-- <option value="_manual">직접입력</option> -->
-                    </select></label>
-                <!-- <button name="emailAuth" type="button"> 이메일 인증하기</button> -->
-            </div>
-        </fieldset>
+                <div>
+                    <label for="passwordck"><strong>비밀번호 확인</strong> </label>
+                    <input id="passwordck" type="password" name="psw" placeholder="최소 7자리 이상" minlength="7" required>
+                </div>
 
-        <fieldset id="choose">
-            <legend>선택사항 </legend>
-            
-            <!-- <div>
-                <label for="day_birth"><em><sub>DAY &mdash;</sub></em></label>
-                <label for="month_birth"><em><sub>MONTH &ndash;</sub></em></label>
-                <label for="year_birth"><em><sub>YEAR</sub></em></label>
-            </div> -->
-            
-            <div>
-                <label><strong>생년월일</strong>
+                <!-- 비밀번호랑 비밀번호 확인 같아야 넘어가는건 어캐하는지 모름,,  -->
+
+                <div>
+                    <label for="phone">전화번호</label>
+                    <input id="phone" type="text" name="phone" placeholder="- 빼고 입력하세요" required>
+                </div>
+
+                <!-- <div class="phone">
+          <label for="phone">
+            <strong>전화번호</strong>
+          </label>
+          <input type="text" name="first_phone_num" value="010" minlength="3" maxlength="3" size="1" readonly required>
+          <span>-</span>
+          <input id="phone" type="text" name="mid_phone_num" minlength="3" maxlength="4" size="1" required>
+          <span>-</span>
+          <input type="text" name="last_phone_num" minlength="4" maxlength="4" size="1" required>
+        </div> -->
+
+                <div>
+                    <label for="email">이메일</label>
+                    <input id="email" type="email" name="email" placeholder="example@.example.com" required>
+                </div>
+
+                <!-- <div>
+          <label for="e-mail">
+            <strong>이메일</strong>
+          </label>
+          <div class="e-mail">
+            <input id="e-mail" type="text" placeholder="이메일" size="5" required>
+            <span>@</span>
+            <input type="text" name="emailBack" placeholder="직접입력" size="1">
+            <select class="form-control empty" required>
+              <option value="none" disabled selected>직접입력</option>
+              <option value="naver.com">naver.com</option>
+              <option value="hanmail.net">hanmail.net</option>
+              <option value="daum.net">daum.net</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="nate.com">nate.com</option>
+              <option value="hotmail.com">hotmail.com</option>
+              <option value="outlook.com">outlook.com</option>
+              <option value="icloud.com">icloud.com</option>
+            </select>
+          </div>
+        </div> -->
+
+                <div class="home-address">
+                    <label for="postal-code">주소</label>
+                    <div>
+                        <input class="postal-code" type="text" name="postalCode" id="postal-code" readonly required>
+                        <button type="button">우편번호 검색</button>
+                        <input class="address" type="text" name="address[]" readonly required>
+                        <input class="address" type="text" name="address[]" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="choose">
+                <legend>선택사항 </legend>
+
+                <div>
+                    <p>생년월일</p>
                     <select name="year_birth" id="year_birth">
                         <!-- option[value=$@-1933]{$@-1933}*90 -->
-                        <option value="기본">연도</option>
+                        <option value="none" selected disabled>연도</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
                         <option value="2020">2020</option>
@@ -192,7 +254,7 @@
                     </select>
 
                     <select name="month_birth" id="month_birth">
-                        <option value="기본">월</option>
+                        <option value="none" selected disabled>월</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -208,7 +270,7 @@
                     </select>
 
                     <select name="day_birth" id="day_birth">
-                        <option value="기본">일</option>
+                        <option value="none" selected disabled>일</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -241,52 +303,85 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                </label>
-            </div>
-            
+                </div>
 
-            <div> 
-                <strong>방문경로</strong>
-                <!-- <p> -->
-                    
-                    <input type="checkbox"> 블로그, 카페
-                    
-                    <input type="checkbox"> 지인
-                    
-                    <input type="checkbox"> sns 
-                    
-                    <input type="checkbox"> 포털검색
-                </p>
-            </div> 
-        
-        </fieldset>
+                <div class="visit-root">
+                    <p>방문경로</p>
+                    <div class="checkboxs">
+                        <input id="blog-cafe" name="visit-root" value="blogCafe" type="checkbox" hidden>
+                        <label for="blog-cafe">블로그, 카페</label>
 
-        <fieldset id="agree">
-            <legend><strong>약관동의 </strong></legend>
-            <div>
-                <input type="checkbox" required>만 14세 이상입니다. (필수)
-                <br>
+                        <input id="friend" name="visit-root" value="friend" type="checkbox" hidden>
+                        <label for="friend">지인</label>
 
-                <input type="checkbox" required>
-                <a href="">이용약관(필수)</a>
-                <br>
+                        <input id="sns" name="visit-root" value="sns" type="checkbox" hidden>
+                        <label for="sns">sns</label>
 
-                <input type="checkbox" required>
-                <a href="">개인정보수집 및 이용동의(필수)</a>
-                <br>
+                        <input id="search" name="visit-root" value="search" type="checkbox" hidden>
+                        <label for="search">포털검색</label>
+                    </div>
+                </div>
+            </fieldset>
 
-                <input type="checkbox">
-                <a href="">이벤트, 쿠폰,특가알림 메일 및 SMS 등 수신 (선택)</a>
-                <br>
-            </div> 
-            <input type="submit" id="join" value="회원가입하기">
-        </fieldset>
-    </form>
+            <fieldset id="agree">
+                <legend>약관동의</legend>
+                <div>
+                    <label>
+                        <input type="checkbox" required> 만 14세 이상입니다. (필수)
+                    </label>
 
+                    <label>
+                        <input type="checkbox" required>
+                        <a href="../agreement/">이용약관(필수)</a>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" required>
+                        <a href="../privacy/">개인정보수집 및 이용동의(필수)</a>
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        <a href="">이벤트, 쿠폰,특가알림 메일 및 SMS 등 수신 (선택)</a>
+                    </label>
+                </div>
+                <input type="submit" id="join" value="회원가입하기">
+            </fieldset>
+        </form>
     </main>
 
     <footer>
-        대충 연락처, 저작권 등등 기타 정보
+        <div class="links">
+            <a href="../agreement">이용약관</a>
+            <span>|</span><a href="../privacy">개인정보처리방침</a>
+            <span>|</span><a href="../community/guide/">고객센터</a>
+        </div>
+        <address class="site-address">
+            <p>
+                <small>
+                    안내전화: 1588-9780
+                    <span>|</span> 상호 : KALL
+                </small>
+            </p>
+        </address>
+        <div class="site-info">
+            <p>
+                <small>
+                    사업장소재지 : 경기 성남시 분당구 돌마로 46 (광천빌딩 5층)
+                </small>
+            </p>
+            <p>
+                <small>
+                    사업자등록번호 : 214-86-26812
+                    <span>|</span> 대표이사: 김상곤
+                </small>
+            </p>
+            <p>
+                <small>
+                    COPYRIGHT <i class="far fa-copyright"></i> KALL. ALL RIGHTS RESERVED.
+                </small>
+            </p>
+        </div>
     </footer>
 </body>
 
