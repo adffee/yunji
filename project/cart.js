@@ -69,3 +69,9 @@ for (let i = 0; i < data.length; i++) {
 
     cart.appendChild(lineDiv);
 }
+
+const deletebt = document.querySelector('.seleted-delete');
+
+if (deletebt.checked) {
+    
+}
